@@ -1,0 +1,42 @@
+Size of sheets [Ls X Hs] = 25 X 18 (inches)
+Left and Right Sheet space left, LR_space = 10 (cm)
+Top and Bottom Sheet space left, TB_space = (w/2)+10 (cm)
+
+Dimensions of box l X w X h = 115 X 75 X 75 (cm)
+Gap for Ulti Pin and Sidhi Pin is G = 12 (cm)
+
+Start Calculations
+Length in x-direction = Ls
+Margin in x-direction should not be negative Mx
+1) Remove space of sides
+     Mx = Ls - LR_space
+2) Calculate number of box in x-direction
+     Mx = Mx - 2*(l+w)
+     Check Mx not negative
+     if not negative than n_x_direction = 1
+     else sheet size wrong
+
+     Mx = Mx - 2*(l+w)
+     Check Mx not negative
+     if not negative than n_x_direction += 1
+     else check y-direction now
+     
+Length in y-direction = Hs
+Margin in y-direction should not be negative My
+1) Remove space of sides    
+     My = Hs - TB_space
+2) Calculate number of box in y-direction 
+     (Sidhi Pin)
+     My = My - (h+w) - G
+     Check My not negative
+     if not negative than n_y_direction = 1
+     else sheet size wrong
+
+     (Ulti Pin)
+     My = My - (l+w) - TB_space
+     Check My not negative
+     if not negative than n_y_direction += 1
+     else
+
+3) Next Set start
+     
